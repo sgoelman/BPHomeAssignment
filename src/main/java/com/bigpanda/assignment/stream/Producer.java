@@ -10,14 +10,11 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.file.Path;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CompletableFuture;
-
 
 
 @Component
@@ -32,7 +29,6 @@ public class Producer extends Flowable<String> {
         this.subscribeOn(Schedulers.computation())
                 .observeOn(Schedulers.single())
                 .safeSubscribe(consumer);
-
     }
 
     @EventListener(ApplicationReadyEvent.class)
@@ -90,8 +86,8 @@ public class Producer extends Flowable<String> {
 
         ProcessBuilder processBuilder = new ProcessBuilder();
         String base = System.getProperty("user.dir");
-        String amd64=(base + "\\src\\main\\java\\com\\bigpanda\\assignment\\stream\\generator-windows-amd64.exe");
-        processBuilder.command(amd64);
+        String amd64 = ("\\src\\main\\resources\\generator-windows-amd64.exe");
+        processBuilder.command(base + amd64);
 
         try {
             Process process = processBuilder.start();

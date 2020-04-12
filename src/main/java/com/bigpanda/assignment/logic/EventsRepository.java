@@ -1,4 +1,4 @@
-package com.bigpanda.assignment.stream;
+package com.bigpanda.assignment.logic;
 
 import com.bigpanda.assignment.entity.Event;
 import lombok.Getter;
