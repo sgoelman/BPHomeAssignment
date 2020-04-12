@@ -14,7 +14,11 @@ _**Instructions on running the project**_
  **4.Get a count of a specific event data:** _http://localhost:8081/events/data/{data}_
     
    example : http://localhost:8081/events/data/sit  
+   
+**If data or event is known (never received) service will return the following:**
  
+    {"result": "Error couldn't find required data "}
+
 **Project Goals :**
 
     1.Stateless

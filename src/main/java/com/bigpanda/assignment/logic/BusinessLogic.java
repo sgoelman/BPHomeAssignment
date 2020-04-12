@@ -22,7 +22,7 @@ public class BusinessLogic {
         }
     }
 
-    public int getEventTypeCount(String eventType) {
+    public Number getEventTypeCount(String eventType) {
         return eventsRepository.getCountByEventType(eventType);
     }
 
@@ -31,7 +31,7 @@ public class BusinessLogic {
     }
 
 
-    public int getDataCount(String data) {
+    public Number getDataCount(String data) {
         return eventsRepository.getDataCount(data);
     }
 

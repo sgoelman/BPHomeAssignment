@@ -1,9 +1,14 @@
 package com.bigpanda.assignment.response;
 
 public class ResponseData {
-    public int result;
+    public Object result;
 
-    public ResponseData(int data) {
-        result = data;
+    public ResponseData(Number data) {
+        if (data == null) {
+            result = "Error couldn't find required data ";
+        } else {
+            result = data;
+        }
+
     }
 }

@@ -41,19 +41,20 @@ public class EventsRepository {
      * @param eventType string should be an known event type
      * @return amount of event_types
      */
-    public int getCountByEventType(String eventType) {
+    public Number getCountByEventType(String eventType) {
         if (eventCount.containsKey(eventType)) {
             return eventCount.get(eventType);
         }
-        System.out.println("unknown eventType: " + eventType);
-        return 0;
+        else
+            System.out.println("unknown eventType: " + eventType);
+            return null;
     }
 
-    public int getDataCount(String data) {
+    public Number getDataCount(String data) {
         if (dataCount.containsKey(data)) {
             return dataCount.get(data);
         }
         System.out.println("unknown eventType: " + data);
-        return 0;
+        return null;
     }
 }
