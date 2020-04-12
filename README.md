@@ -4,12 +4,16 @@ _**Instructions on running the project**_
 **REST Controller API Mapping:**
   
  1.Get a count of all the events: _http://localhost:8081/events/_
- 2.Get a count of a specific event: _http://localhost:8081/events/{name}_ 
-    example : http://localhost:8081/events/bar 
- 3.Get all events data count: _http://localhost:8081/events/data_
- 4.Get a count of a specific event data: _http://localhost:8081/events/data/{data}_
-    example : http://localhost:8081/events/data/sit 
  
+ 2.Get a count of a specific event: _http://localhost:8081/events/{name}_ 
+ 
+    example : http://localhost:8081/events/bar 
+ 
+ 3.Get all events data count: _http://localhost:8081/events/data_
+ 
+ 4.Get a count of a specific event data: _http://localhost:8081/events/data/{data}_
+    
+    example : http://localhost:8081/events/data/sit  
  
 Project Goals :
     1.Stateless
